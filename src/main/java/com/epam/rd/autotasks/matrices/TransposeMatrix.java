@@ -3,10 +3,18 @@ import java.util.Arrays;
 
 public class TransposeMatrix {
     public static int[][] transpose(int[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
 
-        //Put your code here
+        int[][] transposedMatrix = new int[n][m];
 
-        return null;
+        for(int x = 0; x < n; x++) {
+            for(int y = 0; y < m; y++) {
+                transposedMatrix[x][y] = matrix[y][x];
+            }
+        }
+
+        return transposedMatrix;
     }
 
     public static void main(String[] args) {
